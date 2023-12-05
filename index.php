@@ -29,6 +29,9 @@
             <div>
                 <?php wp_nav_menu([
                     'theme_location' => 'main_menu',
+                    'menu_class' => 'flex space-x-2 text-white',
+                    'menu_id' => 'zakiul',
+                   
                 ]); ?>
             </div>
         </div>
