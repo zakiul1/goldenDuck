@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .mainContainer {
+        @apply container m-auto;
+    }
+
+    .mainContainer ul {
+        @apply text-white bg-lime-600 p-3 flex space-x-2;
+
+    }
+
+    .mainContainer ul li {
+        @apply cursor-pointer;
+
+    }
+}

@@ -20,7 +20,7 @@ add_action('wp_enqueue_scripts', 'goldenDuck_theme_scripts');
 
 function goldenDuck_customizer_register($wp_customize)
 {
-
+    //Custom logo Func Theme Customizer
     $wp_customize->add_section(
         'goldenDuck_header_area',
         array(
@@ -39,6 +39,25 @@ function goldenDuck_customizer_register($wp_customize)
         'settings' => 'goldenDuck_logo', // Change 'setting' to 'settings'
         'section' => 'goldenDuck_header_area',
     ]));
+    //Footer  Func Theme Customizer
+    $wp_customize->add_section(
+        'goldenDuck_footer_area',
+        array(
+            'title' => __('Footer Area', 'goldenDuck'),
+            'descricption' => 'Footer Customize From Here',
+
+        )
+    );
+    $wp_customize->add_setting('goldenDuck_setting_footer_area', [
+        'default' => '&Copy; Copyright 2024',
+    ]);
+    $wp_customize->add_control('goldenDuck_footer_area', [
+        'label' => __('Copyright Text', 'goldenDuck'),
+        'settings' => 'goldenDuck_setting_footer_area',
+        'section' => 'goldenDuck_footer_area',
+        'description' => "Add here From Copy Right",
+        "type" => "textarea",
+    ]);
 
 }
 
